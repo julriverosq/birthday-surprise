@@ -21,7 +21,8 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 
-  const link = `${process.env.NEXT_PUBLIC_BASE_URL}/regalo/${data.id}`;
+  const url = new URL(request.url);
+  const link = `${url.origin}/regalo/${data.id}`;
 
   return NextResponse.json({ id: data.id, link });
 }
