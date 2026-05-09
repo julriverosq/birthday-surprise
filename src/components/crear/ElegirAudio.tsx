@@ -50,11 +50,11 @@ export default function ElegirAudio({ selected, onSelect, senderName, recipientN
 
   return (
     <motion.div
-      className="flex w-full min-h-screen max-md:flex-col"
+      className="flex w-full h-screen overflow-hidden max-md:flex-col max-md:h-auto max-md:min-h-screen max-md:overflow-visible"
       initial={{ opacity: 0, x: 30 }}
       animate={{ opacity: 1, x: 0 }}
     >
-      <div className="w-[660px] shrink-0 flex flex-col justify-center px-[80px] py-[80px] bg-white max-md:w-full max-md:px-6 max-md:py-8">
+      <div className="w-[660px] shrink-0 flex flex-col justify-center px-[80px] py-[40px] bg-white max-md:w-full max-md:px-6 max-md:py-8">
         <span className="text-[#5E7CE2] text-[14px] font-semibold tracking-wide uppercase mb-2">
           PASO 3 DE 4
         </span>
